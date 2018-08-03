@@ -1,0 +1,32 @@
+{
+  "name": "Device",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "date_added": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "temperatures": {
+      "type": "hasMany",
+      "model": "Temperature",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
